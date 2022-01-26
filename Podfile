@@ -6,7 +6,6 @@ target 'jahez' do
   use_frameworks!
   
   pod 'Moya', '~> 15.0'
-  pod 'Swinject'
   pod 'Kingfisher'
   # Pods for jahez
   

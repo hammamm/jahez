@@ -49,7 +49,6 @@ class NetworkService {
     }
 
     private static func request(target: TargetType, networkActivityClosure: @escaping ((NetworkActivityChangeType) -> Void), completion: @escaping (MoyaNetworkResponse) -> Void) {
-        let date = Date()
         MoyaProvider<MultiTarget>(plugins: [
             NetworkLoggerPlugin(configuration: .init(logOptions: .verbose)),
             NetworkActivityPlugin(networkActivityClosure: { change, target in

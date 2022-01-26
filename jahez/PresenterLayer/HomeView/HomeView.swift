@@ -20,7 +20,15 @@ class HomeView: BaseView {
         collectionView.register(RestaurantCollectionViewCell.self, forCellWithReuseIdentifier: RestaurantCollectionViewCell.identifier)
         return collectionView
     }()
-
+    
+    @objc func topRatedSort() {
+        data?.sort(by: { $0.rating > $1.rating })
+    }
+    
+    @objc func lowestRatedSort() {
+        data?.sort(by: { $0.rating < $1.rating })
+    }
+        
     private var data: [Restaurant]?{
         didSet{
             collectionView.reloadData()
@@ -34,10 +42,14 @@ class HomeView: BaseView {
     }
 
     private func setupUi() {
+        setupNavigation()
         view.addSubview(collectionView)
         collectionView.anchorsToEdges(of: view)
+        navigationItem.title = "jahez"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "top rated", style: .plain, target: self, action: #selector(topRatedSort))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "lowest rated", style: .plain, target: self, action: #selector(lowestRatedSort))
     }
-    
+        
     private func getData() {
         Restaurant.getData(delegate: self, { result in
             result.getObject(self, callAgain: nil) { [weak self] object in
@@ -48,7 +60,11 @@ class HomeView: BaseView {
 }
 
 extension HomeView: UICollectionViewDelegate{
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let view = DetailsView()
+        view.data = data?[indexPath.item]
+        navigationController?.pushViewController(view, animated: true)
+    }
 }
 
 extension HomeView: UICollectionViewDataSource{
