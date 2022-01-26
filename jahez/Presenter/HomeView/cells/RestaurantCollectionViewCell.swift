@@ -14,6 +14,7 @@ class RestaurantCollectionViewCell: UICollectionViewCell {
     var data: Restaurant?{
         didSet{
             imageView.loadImage(with: data?.image)
+            nameLabel.text = data?.name
         }
     }
     
@@ -24,6 +25,7 @@ class RestaurantCollectionViewCell: UICollectionViewCell {
     
     lazy var nameLabel: UILabel = {
         let label = UILabel()
+        label.setup(textColor: .black, font: .regular)
         return label
     }()
     

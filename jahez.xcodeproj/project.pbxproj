@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3E1D17F91BE0A358BB766648 /* Pods_jahez.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003795F8D9782368D95A0D40 /* Pods_jahez.framework */; };
+		4B3CE87327A1650C0069A19A /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3CE87227A1650C0069A19A /* UILabel+Extension.swift */; };
+		4B3CE87527A166EF0069A19A /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3CE87427A166EF0069A19A /* UIFont+Extension.swift */; };
 		4BC0A3DA27A08973009B2E18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC0A3D927A08973009B2E18 /* AppDelegate.swift */; };
 		4BC0A3DE27A08973009B2E18 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC0A3DD27A08973009B2E18 /* HomeView.swift */; };
 		4BC0A3E327A08978009B2E18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BC0A3E227A08978009B2E18 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		003795F8D9782368D95A0D40 /* Pods_jahez.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jahez.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B3CE87227A1650C0069A19A /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		4B3CE87427A166EF0069A19A /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		4BC0A3D627A08973009B2E18 /* jahez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jahez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC0A3D927A08973009B2E18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BC0A3DD27A08973009B2E18 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				4BC0A3E727A08978009B2E18 /* Info.plist */,
 				4BC0A3ED27A105AB009B2E18 /* UIView+Extension.swift */,
 				4BC0A3FD27A10CCC009B2E18 /* UIImageView+Extension.swift */,
+				4B3CE87227A1650C0069A19A /* UILabel+Extension.swift */,
+				4B3CE87427A166EF0069A19A /* UIFont+Extension.swift */,
 			);
 			path = jahez;
 			sourceTree = "<group>";
@@ -317,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BC0A3FC27A109F9009B2E18 /* Restaurant+Model.swift in Sources */,
+				4B3CE87527A166EF0069A19A /* UIFont+Extension.swift in Sources */,
 				4BC0A40427A114DE009B2E18 /* Restaurant+Router.swift in Sources */,
 				4BC0A3EE27A105AB009B2E18 /* UIView+Extension.swift in Sources */,
 				4BC0A3FE27A10CCC009B2E18 /* UIImageView+Extension.swift in Sources */,
@@ -324,6 +331,7 @@
 				4BC0A40727A116EA009B2E18 /* ResponseStatus.swift in Sources */,
 				4BC0A40D27A117F1009B2E18 /* NetworkService.swift in Sources */,
 				4BC0A40227A114BE009B2E18 /* Router.swift in Sources */,
+				4B3CE87327A1650C0069A19A /* UILabel+Extension.swift in Sources */,
 				4BC0A3DE27A08973009B2E18 /* HomeView.swift in Sources */,
 				4BC0A3F927A10944009B2E18 /* RestaurantCollectionViewCell.swift in Sources */,
 				4BC0A41627A11E37009B2E18 /* StatusCode+Model.swift in Sources */,
